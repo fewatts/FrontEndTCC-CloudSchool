@@ -1,20 +1,30 @@
+import React, { useState } from 'react';
 import './Navbar.css';
 import cloud from './../../assets/cloud.svg';
 import { Link } from 'react-router-dom';
 
 export function NavBar() {
+  const [isActive, setIsActive] = useState(false);
 
+  const toggleMenu = () => {
+    setIsActive(!isActive);
+  };
 
-    return (
-        <nav>
-            <img src={cloud} alt="logo" className='logo'/>
+  return (
+    <nav className={`navbar ${isActive ? 'active' : ''}`}>
+      <img src={cloud} alt="logo" className='logo' />
 
-            <ul className='links'>
-                <Link to='/'><li>Home</li></Link>
-                <Link to='/'><li>CV</li></Link>
-                <Link to='/'><li>Sobre</li></Link>
-            </ul>
+      <ul className={`links ${isActive ? 'active' : ''}`}>
+        <li><Link to='/' onClick={toggleMenu}>Home</Link></li>
+        <li><Link to='/cv' onClick={toggleMenu}>CV</Link></li>
+        <li><Link to='/about' onClick={toggleMenu}>Sobre</Link></li>
+      </ul>
 
-        </nav>
-    );
+      <div className="navbar-toggle" onClick={toggleMenu}>
+        <span className={`bar ${isActive ? 'active' : ''}`}></span>
+        <span className={`bar ${isActive ? 'active' : ''}`}></span>
+        <span className={`bar ${isActive ? 'active' : ''}`}></span>
+      </div>
+    </nav>
+  );
 }
