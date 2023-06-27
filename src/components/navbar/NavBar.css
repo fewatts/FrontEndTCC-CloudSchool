@@ -1,0 +1,21 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    height: 10vh;
+    padding: 0 5rem;
+    background-color: var(--blue);
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    list-style: none;
+}
+
+li{
+    color: var(--ghostwhite);
+    font-size: 1.5rem;
+}
