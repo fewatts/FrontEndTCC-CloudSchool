@@ -1,0 +1,36 @@
+.Homepic {
+    width: 100%;
+}
+
+.homepic {
+    height: 40rem;
+    width: 40rem;
+    margin: auto;
+}
+
+main {
+    display: flex;
+}
+
+.container {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10rem;
+    padding: 2rem;
+    width: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+       display: block;
+    }
+
+    .container {
+        margin-top: 5rem;
+    }
+
+    .Homepic {
+        max-width: 80%;
+        height: auto;
+    }
+}
