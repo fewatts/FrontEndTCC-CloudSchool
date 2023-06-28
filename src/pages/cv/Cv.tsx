@@ -9,7 +9,10 @@ export function Cv() {
         link.href = fileUrl;
         link.setAttribute('download', fileName);
         document.body.appendChild(link);
-        link.click();
+        
+        const clickEvent = new MouseEvent('click');
+        link.dispatchEvent(clickEvent);
+        ;
         document.body.removeChild(link);
     };
 
