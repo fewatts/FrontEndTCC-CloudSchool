@@ -9,42 +9,42 @@ export function Cv() {
                 <div className='card'>
                     <img src={picfernando} alt="Fernando" className='profilepic' />
                     <h1 className='h1but'>Fernando Alves</h1>
-                    <button className='butGetCv'><a href={cvfernando} target='blank'>Acessar CV</a></button>
+                    <button className='butGetCv'><a href={cvfernando} target='blank'>Download CV</a></button>
                 </div>
             </div>
             <div className='cvbox'>
                 <div className='card'>
                     <img src={picfernando} alt="Fernando" className='profilepic' />
                     <h1 className='h1but'>Fernando Alves</h1>
-                    <button className='butGetCv'><a href={cvfernando} target='blank'>Acessar CV</a></button>
+                    <button className='butGetCv'><a href={cvfernando} target='blank'>Download CV</a></button>
                 </div>
             </div>
             <div className='cvbox'>
                 <div className='card'>
                     <img src={picfernando} alt="Fernando" className='profilepic' />
                     <h1 className='h1but'>Fernando Alves</h1>
-                    <button className='butGetCv'><a href={cvfernando} target='blank'>Acessar CV</a></button>
+                    <button className='butGetCv'><a href={cvfernando} target='blank'>Download CV</a></button>
                 </div>
             </div>
             <div className='cvbox'>
                 <div className='card'>
                     <img src={picfernando} alt="Fernando" className='profilepic' />
                     <h1 className='h1but'>Fernando Alves</h1>
-                    <button className='butGetCv'><a href={cvfernando} target='blank'>Acessar CV</a></button>
+                    <button className='butGetCv'><a href={cvfernando} target='blank'>Download CV</a></button>
                 </div>
             </div>
             <div className='cvbox'>
                 <div className='card'>
                     <img src={picfernando} alt="Fernando" className='profilepic' />
                     <h1 className='h1but'>Fernando Alves</h1>
-                    <button className='butGetCv'><a href={cvfernando} target='blank'>Acessar CV</a></button>
+                    <button className='butGetCv'><a href={cvfernando} target='blank'>Download CV</a></button>
                 </div>
             </div>
             <div className='cvbox'>
                 <div className='card'>
                     <img src={picfernando} alt="Fernando" className='profilepic' />
                     <h1 className='h1but'>Fernando Alves</h1>
-                    <button className='butGetCv'><a href={cvfernando} target='blank'>Acessar CV</a></button>
+                    <button className='butGetCv'><a href={cvfernando} target='blank'>Download CV</a></button>
                 </div>
             </div>
             {/* Repeat the above code block for each card */}

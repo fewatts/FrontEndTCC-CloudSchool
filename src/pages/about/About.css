@@ -13,6 +13,10 @@
     text-align: justify;
 }
 
+.para {
+    text-indent: 30px;
+}
+
 #h1about {
     text-align: left;
     margin-bottom: 2rem;
