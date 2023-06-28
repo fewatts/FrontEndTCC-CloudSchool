@@ -4,7 +4,7 @@
 
 .homepic {
     height: 40rem;
-    width: 40rem;
+    /* width: 40rem; */
     margin: auto;
 }
 
@@ -30,7 +30,7 @@ main {
     }
 
     .Homepic {
-        max-width: 80%;
+        max-width: 100%;
         height: auto;
     }
 }
