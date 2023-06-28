@@ -55,14 +55,6 @@ export function Cv() {
                     <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'CvFernandoAlves')}><a href="">Download CV</a></button>
                 </div>
             </div>
-            <div className='cvbox'>
-                <div className='card'>
-                    <img src={picfernando} alt="Fernando" className='profilepic' />
-                    <h1 className='h1but'>Fernando Alves</h1>
-                    <button className='butGetCv'><a href={cvfernando} target='blank'>Visualizar CV</a></button>
-                    <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'CvFernandoAlves')}><a href="">Download CV</a></button>
-                </div>
-            </div>
         </main>
     );
 }
