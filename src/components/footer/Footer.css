@@ -2,5 +2,11 @@ footer{
     background-color: var(--blue);
     text-align: center;
     color: var(--ghostwhite);
-    padding: 1rem;
+    padding: 2vh;
+}
+
+.git{
+    margin: auto;
+    height: 30px;
+    width: 40px;
 }

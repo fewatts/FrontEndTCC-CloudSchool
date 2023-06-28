@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './NavBar.css';
-import cloud from './../../assets/cloud.svg';
+import cloud from './../../assets/logos/cloud.svg';
 import { Link } from 'react-router-dom';
 
 export function NavBar() {

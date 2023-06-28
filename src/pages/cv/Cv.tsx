@@ -1,32 +1,53 @@
 import './Cv.css';
+import cvfernando from './../../assets/CvFernandoAlvesDePaula.pdf';
+import picfernando from './../../assets/profilepics/Fernando.jpeg';
 
 export function Cv() {
     return (
         <main className='cv'>
-           <div className='cvbox'>
-               <h1 className='h1but'>Cv - Fernando Alves</h1>
-               <button className='butGetCv'><a href="https://drive.google.com/file/d/11YvyNzFRgTLRy3cU6dBCjyi54PXCXJY5/view?usp=drive_link" target='blank'>Acessar CV</a></button>
-           </div>
-           <div className='cvbox'>
-               <h1 className='h1but'>Cv - Fernando Alves</h1>
-               <button className='butGetCv'><a href="https://drive.google.com/file/d/11YvyNzFRgTLRy3cU6dBCjyi54PXCXJY5/view?usp=drive_link" target='blank'>Acessar CV</a></button>
-           </div>
-           <div className='cvbox'>
-               <h1 className='h1but'>Cv - Fernando Alves</h1>
-               <button className='butGetCv'><a href="https://drive.google.com/file/d/11YvyNzFRgTLRy3cU6dBCjyi54PXCXJY5/view?usp=drive_link" target='blank'>Acessar CV</a></button>
-           </div>
-           <div className='cvbox'>
-               <h1 className='h1but'>Cv - Fernando Alves</h1>
-               <button className='butGetCv'><a href="https://drive.google.com/file/d/11YvyNzFRgTLRy3cU6dBCjyi54PXCXJY5/view?usp=drive_link" target='blank'>Acessar CV</a></button>
-           </div>
-           <div className='cvbox'>
-               <h1 className='h1but'>Cv - Fernando Alves</h1>
-               <button className='butGetCv'><a href="https://drive.google.com/file/d/11YvyNzFRgTLRy3cU6dBCjyi54PXCXJY5/view?usp=drive_link" target='blank'>Acessar CV</a></button>
-           </div>
-           <div className='cvbox'>
-               <h1 className='h1but'>Cv - Fernando Alves</h1>
-               <button className='butGetCv'><a href="https://drive.google.com/file/d/11YvyNzFRgTLRy3cU6dBCjyi54PXCXJY5/view?usp=drive_link" target='blank'>Acessar CV</a></button>
-           </div>
+            <div className='cvbox'>
+                <div className='card'>
+                    <img src={picfernando} alt="Fernando" className='profilepic' />
+                    <h1 className='h1but'>Fernando Alves</h1>
+                    <button className='butGetCv'><a href={cvfernando} target='blank'>Acessar CV</a></button>
+                </div>
+            </div>
+            <div className='cvbox'>
+                <div className='card'>
+                    <img src={picfernando} alt="Fernando" className='profilepic' />
+                    <h1 className='h1but'>Fernando Alves</h1>
+                    <button className='butGetCv'><a href={cvfernando} target='blank'>Acessar CV</a></button>
+                </div>
+            </div>
+            <div className='cvbox'>
+                <div className='card'>
+                    <img src={picfernando} alt="Fernando" className='profilepic' />
+                    <h1 className='h1but'>Fernando Alves</h1>
+                    <button className='butGetCv'><a href={cvfernando} target='blank'>Acessar CV</a></button>
+                </div>
+            </div>
+            <div className='cvbox'>
+                <div className='card'>
+                    <img src={picfernando} alt="Fernando" className='profilepic' />
+                    <h1 className='h1but'>Fernando Alves</h1>
+                    <button className='butGetCv'><a href={cvfernando} target='blank'>Acessar CV</a></button>
+                </div>
+            </div>
+            <div className='cvbox'>
+                <div className='card'>
+                    <img src={picfernando} alt="Fernando" className='profilepic' />
+                    <h1 className='h1but'>Fernando Alves</h1>
+                    <button className='butGetCv'><a href={cvfernando} target='blank'>Acessar CV</a></button>
+                </div>
+            </div>
+            <div className='cvbox'>
+                <div className='card'>
+                    <img src={picfernando} alt="Fernando" className='profilepic' />
+                    <h1 className='h1but'>Fernando Alves</h1>
+                    <button className='butGetCv'><a href={cvfernando} target='blank'>Acessar CV</a></button>
+                </div>
+            </div>
+            {/* Repeat the above code block for each card */}
         </main>
     );
 }
