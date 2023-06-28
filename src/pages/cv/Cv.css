@@ -3,30 +3,34 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 18px;
-}
+    gap: 50px;    
+  }
+  
 
 .cvbox {
     flex: 0 0 calc(50% - 5px);
-    margin-bottom: 15px;
-}
-
-.h1but{
     margin-bottom: 20px;
 }
 
-.butGetCv{
+.h1but {
+    margin-top: 23px;
+    margin-bottom: 23px;
+}
+
+.butGetCv {
     background-color: var(--bege);
     border-radius: 5px;
 }
 
 @media screen and (min-width: 768px) {
     .cv {
-        padding: 11rem;
+        padding: 1rem;
     }
 
     .cvbox {
         padding: 10px;
         flex-basis: calc(33.33% - 10px);
+        margin-top: 5vh;
+        margin-bottom: 5vh;
     }
 }

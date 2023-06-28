@@ -1,21 +1,21 @@
 .Homepic {
     width: 100%;
+    height: 100%;
 }
 
 .homepic {
-    height: 40rem;
-    /* width: 40rem; */
-    margin: auto;
+    height: 100vh;
 }
 
 main {
     display: flex;
+    justify-content: space-between;
 }
 
 .container {
     text-align: center;
     font-weight: bold;
-    margin-top: 10rem;
+    margin-top: 26vh;
     padding: 2rem;
     width: auto;
 }
