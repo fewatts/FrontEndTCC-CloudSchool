@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Navbar.css';
+import './NavBar.css';
 import cloud from './../../assets/cloud.svg';
 import { Link } from 'react-router-dom';
 
