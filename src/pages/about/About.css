@@ -1,0 +1,29 @@
+body{
+    background-color: var(--ghostwhite);
+}
+
+.about {
+    margin: auto;
+    padding: 15rem 2rem;
+    display: block;
+    height: auto;
+    max-width: 1000px;
+    color: var(--ghostwhite);
+    background-color: var(--blue);
+    border: solid;
+}
+
+#sh {
+    padding: 8px;
+}
+
+#h1about {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .about {
+        padding: 15rem 5rem;
+    }
+}
