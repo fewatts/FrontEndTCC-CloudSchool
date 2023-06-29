@@ -5,6 +5,7 @@ import { NavBar } from './components/navbar/NavBar';
 import { Home } from './pages/home/Home';
 import { About } from './pages/about/About';
 import { Cv } from './pages/cv/Cv';
+import { Error } from './pages/error/Error';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/cv' element={<Cv/>}/>
           <Route path='/about' element={<About/>}/>
+          <Route path='/error' element={<Error/>}/>
         </Routes>
       </div>
       <Footer />

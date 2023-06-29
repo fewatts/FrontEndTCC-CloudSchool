@@ -12,6 +12,10 @@
     margin-bottom: 15px;
 }
 
+.errorp{
+    text-align: justify;
+}
+
 .card {
     margin-top: 5vh;
     display: flex;
