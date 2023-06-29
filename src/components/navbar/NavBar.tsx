@@ -12,7 +12,7 @@ export function NavBar() {
 
   return (
     <nav className={`navbar ${isActive ? 'active' : ''}`}>
-      <img src={cloud} alt="logo" className='logo' />
+      <Link to='/'><img src={cloud} alt="logo" className='logo' /></Link>
 
       <ul className={`links ${isActive ? 'active' : ''}`}>
         <li><Link to='/' onClick={toggleMenu}>Home</Link></li>
