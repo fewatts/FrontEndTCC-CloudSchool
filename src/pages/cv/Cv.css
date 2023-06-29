@@ -19,7 +19,7 @@
     align-items: center;
     padding: 8px;
     border-radius: 27px;
-    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.455);
+    box-shadow: -20px 20px 1px 1px rgba(0, 0, 0, 0.505);
 
 }
 
@@ -28,7 +28,7 @@
     width: 10vh;
     height: 10vh;
     margin-bottom: 1vh;
-    border: solid;
+    border: solid rgba(0, 0, 0, 0.79);
 }
 
 .h1but {
@@ -39,7 +39,7 @@
 
 .butGetCv {
     background-color: var(--bege);
-    border: solid;
+    border: solid rgba(0, 0, 0, 0.823);
     border-radius: 17px;
     padding-left: 10px;
     margin-top: 10px;
