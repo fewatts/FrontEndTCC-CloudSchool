@@ -14,10 +14,9 @@ import picluis from './../../assets/profilepics/picluis.jpeg';
 
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { isMobile } from 'react-device-detect';
+import { isMobile, isSafari } from 'react-device-detect';
 
 export function Cv() {
-
     const navigate = useNavigate();
 
     const handleDownload = (fileUrl: string, fileName: string) => {
@@ -26,7 +25,7 @@ export function Cv() {
         link.setAttribute('download', fileName);
         document.body.appendChild(link);
 
-        if (!isMobile) {
+        if (!isMobile || !isSafari) {
             try {
                 const clickEvent = new MouseEvent('click');
                 link.dispatchEvent(clickEvent);
@@ -40,6 +39,7 @@ export function Cv() {
                     progress: undefined,
                     theme: "colored",
                 });
+                navigate('/cv')
             } catch (error) {
                 toast.error('Erro no download: ' + error, {
                     position: "top-center",
@@ -54,7 +54,7 @@ export function Cv() {
                 navigate('*');
             }
         }else{
-            toast.warning('Seu navegador não permite dowload\ndireto da página,\nacesse o arquivo para baixa-lo!', {
+            toast.warning('Seu navegador não permite dowload\ndireto da página,\nacesse o arquivo para baixa-lo', {
                 position: "top-center",
                 autoClose: 4000,
                 hideProgressBar: false,
@@ -116,6 +116,7 @@ export function Cv() {
                         <button className='butGetCv' onClick={() => handleDownload(cvluis, 'CvLuisPaulo')}><a href="">Download CV</a></button>
                     </div>
                 </div>
+
             </main>
         </>
     );
