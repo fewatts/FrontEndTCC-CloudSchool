@@ -20,7 +20,7 @@ main {
     text-align: center;
     font-weight: bold;
     margin-top: 26vh;
-    padding: 2rem;
+    padding: 4rem;
     width: auto;
 }
 
@@ -30,7 +30,7 @@ main {
     }
 
     .container {
-        margin-top: 5rem;
+        margin-top: 1rem;
     }
 
     .Homepic {

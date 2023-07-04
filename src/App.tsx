@@ -6,22 +6,27 @@ import { Home } from './pages/home/Home';
 import { About } from './pages/about/About';
 import { Cv } from './pages/cv/Cv';
 import { Error } from './pages/error/Error';
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
 
   return (
-    <BrowserRouter>
-      <NavBar />
-      <div className='app'>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/cv' element={<Cv/>}/>
-          <Route path='/about' element={<About/>}/>
-          <Route path='*' element={<Error/>}/>
-        </Routes>
-      </div>
-      <Footer />
-    </BrowserRouter>
+    <>
+      <ToastContainer />
+      <BrowserRouter>
+        <NavBar />
+        <div className='app'>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/cv' element={<Cv />} />
+            <Route path='/about' element={<About />} />
+            <Route path='*' element={<Error />} />
+          </Routes>
+        </div>
+        <Footer />
+      </BrowserRouter>
+    </>
   )
 }
 

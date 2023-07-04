@@ -3,8 +3,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
-    margin-bottom: 60px;
+    gap: 70px;
+    margin-left: 0px;
+    margin-bottom: 80px;
 }
 
 .cvbox {
@@ -14,6 +15,11 @@
 
 .errorp{
     text-align: justify;
+}
+
+.h1cv{
+    text-align: center;
+    margin: 30px 30px;
 }
 
 .card {
@@ -52,7 +58,8 @@
 
 @media screen and (min-width: 768px) {
     .cv {
-        padding: 1rem;
+        padding-left: 4rem;
+        margin-left: 38px;
     }
 
     .cvbox {
