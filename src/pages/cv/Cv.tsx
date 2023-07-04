@@ -1,13 +1,20 @@
 import './Cv.css';
 
-import cvfernando from './../../assets/CvFernandoAlvesDePaula.pdf';
+import cvfernando from './../../assets/CV-FernandoAlves.pdf';
 import picfernando from './../../assets/profilepics/Fernando.jpeg';
 
 import cvcamilla from './../../assets/CV-CamillaCarvalho.pdf';
 import piccamilla from './../../assets/profilepics/Camila.jpeg';
 
+import cvbruna from './../../assets/CV-BRUNATULIK.pdf';
+import picbruna from './../../assets/profilepics/picbruna.jpeg';
+
+import cvluis from './../../assets/CV-LuisPaulo.pdf';
+import picluis from './../../assets/profilepics/picluis.jpeg';
+
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { isMobile } from 'react-device-detect';
 
 export function Cv() {
 
@@ -19,10 +26,35 @@ export function Cv() {
         link.setAttribute('download', fileName);
         document.body.appendChild(link);
 
-        try {
-            const clickEvent = new MouseEvent('click');
-            link.dispatchEvent(clickEvent);
-            toast.success('Download realizado!', {
+        if (!isMobile) {
+            try {
+                const clickEvent = new MouseEvent('click');
+                link.dispatchEvent(clickEvent);
+                toast.success('Download realizado!', {
+                    position: "top-center",
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
+            } catch (error) {
+                toast.error('Erro no download: ' + error, {
+                    position: "top-center",
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
+                navigate('*');
+            }
+        }else{
+            toast.warning('Seu navegador não permite dowload\ndireto da página,\nacesse o arquivo para baixa-lo!', {
                 position: "top-center",
                 autoClose: 4000,
                 hideProgressBar: false,
@@ -32,18 +64,6 @@ export function Cv() {
                 progress: undefined,
                 theme: "colored",
             });
-        } catch (error) {
-            toast.error('Erro no download: ' + error, {
-                position: "top-center",
-                autoClose: 4000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-            });
-            navigate('*');
         }
         document.body.removeChild(link);
     };
@@ -54,10 +74,10 @@ export function Cv() {
             <main className='cv'>
                 <div className='cvbox'>
                     <div className='card'>
-                        <img src={picfernando} alt="Fernando" className='profilepic' />
-                        <h2 className='h1but'>Fernando Alves</h2>
-                        <button className='butGetCv'><a href={cvfernando} target='blank'>Visualizar CV</a></button>
-                        <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'CvFernandoAlves')}><a href="">Download CV</a></button>
+                        <img src={picbruna} alt="Bruna Tulik" className='profilepic' />
+                        <h2 className='h1but'>Bruna Tulik</h2>
+                        <button className='butGetCv'><a href={cvbruna} target='blank'>Visualizar CV</a></button>
+                        <button className='butGetCv' onClick={() => handleDownload(cvbruna, 'Cv-BrunaTulik')}><a href="">Download CV</a></button>
                     </div>
                 </div>
 
@@ -72,28 +92,28 @@ export function Cv() {
 
                 <div className='cvbox'>
                     <div className='card'>
-                        <img src={picfernando} alt="Fernando" className='profilepic' />
+                        <img src={picfernando} alt="Fernando Alves" className='profilepic' />
                         <h2 className='h1but'>Fernando Alves</h2>
                         <button className='butGetCv'><a href={cvfernando} target='blank'>Visualizar CV</a></button>
-                        <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'CvFernandoAlves')}><a href="">Download CV</a></button>
+                        <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'Cv-FernandoAlves')}><a href="">Download CV</a></button>
                     </div>
                 </div>
 
                 <div className='cvbox'>
                     <div className='card'>
-                        <img src={picfernando} alt="Fernando" className='profilepic' />
+                        <img src={picfernando} alt="Fernando Alves" className='profilepic' />
                         <h2 className='h1but'>Fernando Alves</h2>
                         <button className='butGetCv'><a href={cvfernando} target='blank'>Visualizar CV</a></button>
-                        <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'CvFernandoAlves')}><a href="">Download CV</a></button>
+                        <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'Cv-FernandoAlves')}><a href="">Download CV</a></button>
                     </div>
                 </div>
 
                 <div className='cvbox'>
                     <div className='card'>
-                        <img src={picfernando} alt="Fernando" className='profilepic' />
-                        <h2 className='h1but'>Fernando Alves</h2>
-                        <button className='butGetCv'><a href={cvfernando} target='blank'>Visualizar CV</a></button>
-                        <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'CvFernandoAlves')}><a href="">Download CV</a></button>
+                        <img src={picluis} alt="Luis Paulo" className='profilepic' />
+                        <h2 className='h1but'>Luis Paulo</h2>
+                        <button className='butGetCv'><a href={cvluis} target='blank'>Visualizar CV</a></button>
+                        <button className='butGetCv' onClick={() => handleDownload(cvluis, 'CvLuisPaulo')}><a href="">Download CV</a></button>
                     </div>
                 </div>
             </main>
