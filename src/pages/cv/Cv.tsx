@@ -53,7 +53,8 @@ export function Cv() {
                 });
                 navigate('*');
             }
-        }else{
+            document.body.removeChild(link);
+        } else {
             toast.warning('Seu navegador não permite dowload\ndireto da página,\nacesse o arquivo para baixa-lo', {
                 position: "top-center",
                 autoClose: 4000,
@@ -64,8 +65,8 @@ export function Cv() {
                 progress: undefined,
                 theme: "colored",
             });
+            navigate('/cv')
         }
-        document.body.removeChild(link);
     };
 
     return (
