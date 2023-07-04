@@ -7,6 +7,10 @@
     height: 100vh;
 }
 
+.text1{
+    text-align: justify;
+}
+
 main {
     display: flex;
     justify-content: space-between;

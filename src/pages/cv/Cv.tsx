@@ -1,10 +1,13 @@
 import './Cv.css';
 import { useState } from 'react';
+
 import cvfernando from './../../assets/CvFernandoAlvesDePaula.pdf';
 import picfernando from './../../assets/profilepics/Fernando.jpeg';
 
-export function Cv() {
+import cvcamilla from './../../assets/CV-CamillaCarvalho.pdf';
+import piccamilla from './../../assets/profilepics/Camila.jpeg';
 
+export function Cv() {
 
     const [downloadSuccess, setDownloadSuccess] = useState(true);
 
@@ -33,7 +36,25 @@ export function Cv() {
                     <div className='cvbox'>
                         <div className='card'>
                             <img src={picfernando} alt="Fernando" className='profilepic' />
-                            <h1 className='h1but'>Fernando Alves</h1>
+                            <h2 className='h1but'>Fernando Alves</h2>
+                            <button className='butGetCv'><a href={cvfernando} target='blank'>Visualizar CV</a></button>
+                            <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'CvFernandoAlves')}><a href="">Download CV</a></button>
+                        </div>
+                    </div>
+
+                    <div className='cvbox'>
+                        <div className='card'>
+                            <img src={piccamilla} alt="Camilla Carvalho" className='profilepic' />
+                            <h2 className='h1but'>Camilla Carvalho</h2>
+                            <button className='butGetCv'><a href={cvcamilla} target='blank'>Visualizar CV</a></button>
+                            <button className='butGetCv' onClick={() => handleDownload(cvcamilla, 'Cv-CamillaCarvalho')}><a href="">Download CV</a></button>
+                        </div>
+                    </div>
+
+                    <div className='cvbox'>
+                        <div className='card'>
+                            <img src={picfernando} alt="Fernando" className='profilepic' />
+                            <h2 className='h1but'>Fernando Alves</h2>
                             <button className='butGetCv'><a href={cvfernando} target='blank'>Visualizar CV</a></button>
                             <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'CvFernandoAlves')}><a href="">Download CV</a></button>
                         </div>
@@ -51,25 +72,7 @@ export function Cv() {
                     <div className='cvbox'>
                         <div className='card'>
                             <img src={picfernando} alt="Fernando" className='profilepic' />
-                            <h1 className='h1but'>Fernando Alves</h1>
-                            <button className='butGetCv'><a href={cvfernando} target='blank'>Visualizar CV</a></button>
-                            <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'CvFernandoAlves')}><a href="">Download CV</a></button>
-                        </div>
-                    </div>
-
-                    <div className='cvbox'>
-                        <div className='card'>
-                            <img src={picfernando} alt="Fernando" className='profilepic' />
-                            <h1 className='h1but'>Fernando Alves</h1>
-                            <button className='butGetCv'><a href={cvfernando} target='blank'>Visualizar CV</a></button>
-                            <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'CvFernandoAlves')}><a href="">Download CV</a></button>
-                        </div>
-                    </div>
-
-                    <div className='cvbox'>
-                        <div className='card'>
-                            <img src={picfernando} alt="Fernando" className='profilepic' />
-                            <h1 className='h1but'>Fernando Alves</h1>
+                            <h2 className='h1but'>Fernando Alves</h2>
                             <button className='butGetCv'><a href={cvfernando} target='blank'>Visualizar CV</a></button>
                             <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'CvFernandoAlves')}><a href="">Download CV</a></button>
                         </div>
