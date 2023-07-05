@@ -1,5 +1,9 @@
 import './Cv.css';
 
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { isIOS, isMacOs, isSafari } from 'react-device-detect';
+
 import cvfernando from './../../assets/CV-FernandoAlves.pdf';
 import picfernando from './../../assets/profilepics/Fernando.jpeg';
 
@@ -12,9 +16,38 @@ import picbruna from './../../assets/profilepics/picbruna.jpeg';
 import cvluis from './../../assets/CV-LuisPaulo.pdf';
 import picluis from './../../assets/profilepics/picluis.jpeg';
 
-import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
-import { isIOS, isMacOs, isSafari } from 'react-device-detect';
+const integrantes = [
+    {
+        name: 'Bruna Tulik',
+        cvlink: cvbruna,
+        cvname: 'Cv-Bruna',
+        pic: picbruna,
+    },
+    {
+        name: 'Camila Carvalho',
+        cvlink: cvcamilla,
+        cvname: 'Cv-Camilla',
+        pic: piccamilla,
+    },
+    {
+        name: 'Erika',
+        cvlink: cvfernando,
+        cvname: 'Cv-Erika',
+        pic: picfernando
+    },
+    {
+        name: 'Fernando Alves',
+        cvlink: cvfernando,
+        cvname: 'Cv-Fernando',
+        pic: picfernando,
+    },
+    {
+        name: 'Luis Paulo',
+        cvlink: cvluis,
+        cvname: 'Cv-Luis',
+        pic: picluis,
+    }
+];
 
 export function Cv() {
     const navigate = useNavigate();
@@ -30,94 +63,64 @@ export function Cv() {
                 const clickEvent = new MouseEvent('click');
                 link.dispatchEvent(clickEvent);
                 toast.success('Download realizado!', {
-                    position: "top-center",
+                    position: 'top-center',
                     autoClose: 4000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined,
-                    theme: "colored",
+                    theme: 'colored',
                 });
-                navigate('/cv')
+                navigate('/cv');
             } catch (error) {
                 toast.error('Erro no download: ' + error, {
-                    position: "top-center",
+                    position: 'top-center',
                     autoClose: 4000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined,
-                    theme: "colored",
+                    theme: 'colored',
                 });
                 navigate('*');
             }
             document.body.removeChild(link);
         } else {
-            toast.warning('Seu navegador não permite dowload\ndireto da página,\nacesse o arquivo para baixa-lo', {
-                position: "top-center",
-                autoClose: 4000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-            });
-            navigate('/cv')
+            toast.warning(
+                'Seu navegador não permite dowload\ndireto da página,\nacesse o arquivo para baixa-lo',
+                {
+                    position: 'top-center',
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: 'colored',
+                }
+            );
+            navigate('/cv');
         }
     };
+
 
     return (
         <>
             <h2 className='h1cv'>Integrantes Grupo 1:</h2>
             <main className='cv'>
-                <div className='cvbox'>
-                    <div className='card'>
-                        <img src={picbruna} alt="Bruna Tulik" className='profilepic' />
-                        <h2 className='h1but'>Bruna Tulik</h2>
-                        <button className='butGetCv'><a href={cvbruna} target='blank'>Visualizar CV</a></button>
-                        {(!isSafari || !isIOS || !isMacOs) && <button className='butGetCv' onClick={() => handleDownload(cvbruna, 'Cv-BrunaTulik')}><a href="">Download CV</a></button>}
-                    </div>
-                </div>
 
-                <div className='cvbox'>
-                    <div className='card'>
-                        <img src={piccamilla} alt="Camilla Carvalho" className='profilepic' />
-                        <h2 className='h1but'>Camilla Carvalho</h2>
-                        <button className='butGetCv'><a href={cvcamilla} target='blank'>Visualizar CV</a></button>
-                        {(!isSafari || !isIOS || !isMacOs) && <button className='butGetCv' onClick={() => handleDownload(cvcamilla, 'Cv-CamillaCarvalho')}><a href="">Download CV</a></button>}
+                {integrantes.map(intengrante => (
+                    <div className='cvbox'>
+                        <div className='card'>
+                            <img src={intengrante.pic} alt={intengrante.name} className='profilepic' />
+                            <h2 className='h1but'>{intengrante.name}</h2>
+                            <button className='butGetCv'><a href={intengrante.cvlink} target='blank'>Visualizar CV</a></button>
+                            {(!isSafari && !isIOS && !isMacOs) && <button className='butGetCv' onClick={() => handleDownload(intengrante.cvlink, intengrante.cvname)}><a href="">Download CV</a></button>}
+                        </div>
                     </div>
-                </div>
-
-                <div className='cvbox'>
-                    <div className='card'>
-                        <img src={picfernando} alt="Fernando Alves" className='profilepic' />
-                        <h2 className='h1but'>Fernando Alves</h2>
-                        <button className='butGetCv'><a href={cvfernando} target='blank'>Visualizar CV</a></button>
-                        {(!isSafari || !isIOS || !isMacOs) && <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'Cv-FernandoAlves')}><a href="">Download CV</a></button>}
-                    </div>
-                </div>
-
-                <div className='cvbox'>
-                    <div className='card'>
-                        <img src={picfernando} alt="Fernando Alves" className='profilepic' />
-                        <h2 className='h1but'>Fernando Alves</h2>
-                        <button className='butGetCv'><a href={cvfernando} target='blank'>Visualizar CV</a></button>
-                        {(!isSafari || !isIOS || !isMacOs) && <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'Cv-FernandoAlves')}><a href="">Download CV</a></button>}
-                    </div>
-                </div>
-
-                <div className='cvbox'>
-                    <div className='card'>
-                        <img src={picluis} alt="Luis Paulo" className='profilepic' />
-                        <h2 className='h1but'>Luis Paulo</h2>
-                        <button className='butGetCv'><a href={cvluis} target='blank'>Visualizar CV</a></button>
-                        {(!isSafari || !isIOS || !isMacOs) && <button className='butGetCv' onClick={() => handleDownload(cvluis, 'CvLuisPaulo')}><a href="">Download CV</a></button>}
-                        
-                    </div>
-                </div>
+                ))}
 
             </main>
         </>
