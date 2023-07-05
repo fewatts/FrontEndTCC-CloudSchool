@@ -14,7 +14,7 @@ import picluis from './../../assets/profilepics/picluis.jpeg';
 
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { isSafari } from 'react-device-detect';
+import { isIOS, isMacOs, isSafari } from 'react-device-detect';
 
 export function Cv() {
     const navigate = useNavigate();
@@ -78,7 +78,7 @@ export function Cv() {
                         <img src={picbruna} alt="Bruna Tulik" className='profilepic' />
                         <h2 className='h1but'>Bruna Tulik</h2>
                         <button className='butGetCv'><a href={cvbruna} target='blank'>Visualizar CV</a></button>
-                        {!isSafari && <button className='butGetCv' onClick={() => handleDownload(cvbruna, 'Cv-BrunaTulik')}><a href="">Download CV</a></button>}
+                        {(!isSafari || !isIOS || !isMacOs) && <button className='butGetCv' onClick={() => handleDownload(cvbruna, 'Cv-BrunaTulik')}><a href="">Download CV</a></button>}
                     </div>
                 </div>
 
@@ -87,7 +87,7 @@ export function Cv() {
                         <img src={piccamilla} alt="Camilla Carvalho" className='profilepic' />
                         <h2 className='h1but'>Camilla Carvalho</h2>
                         <button className='butGetCv'><a href={cvcamilla} target='blank'>Visualizar CV</a></button>
-                        {!isSafari && <button className='butGetCv' onClick={() => handleDownload(cvcamilla, 'Cv-CamillaCarvalho')}><a href="">Download CV</a></button>}
+                        {(!isSafari || !isIOS || !isMacOs) && <button className='butGetCv' onClick={() => handleDownload(cvcamilla, 'Cv-CamillaCarvalho')}><a href="">Download CV</a></button>}
                     </div>
                 </div>
 
@@ -96,7 +96,7 @@ export function Cv() {
                         <img src={picfernando} alt="Fernando Alves" className='profilepic' />
                         <h2 className='h1but'>Fernando Alves</h2>
                         <button className='butGetCv'><a href={cvfernando} target='blank'>Visualizar CV</a></button>
-                        {!isSafari && <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'Cv-FernandoAlves')}><a href="">Download CV</a></button>}
+                        {(!isSafari || !isIOS || !isMacOs) && <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'Cv-FernandoAlves')}><a href="">Download CV</a></button>}
                     </div>
                 </div>
 
@@ -105,7 +105,7 @@ export function Cv() {
                         <img src={picfernando} alt="Fernando Alves" className='profilepic' />
                         <h2 className='h1but'>Fernando Alves</h2>
                         <button className='butGetCv'><a href={cvfernando} target='blank'>Visualizar CV</a></button>
-                        {!isSafari && <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'Cv-FernandoAlves')}><a href="">Download CV</a></button>}
+                        {(!isSafari || !isIOS || !isMacOs) && <button className='butGetCv' onClick={() => handleDownload(cvfernando, 'Cv-FernandoAlves')}><a href="">Download CV</a></button>}
                     </div>
                 </div>
 
@@ -114,7 +114,7 @@ export function Cv() {
                         <img src={picluis} alt="Luis Paulo" className='profilepic' />
                         <h2 className='h1but'>Luis Paulo</h2>
                         <button className='butGetCv'><a href={cvluis} target='blank'>Visualizar CV</a></button>
-                        {!isSafari && <button className='butGetCv' onClick={() => handleDownload(cvluis, 'CvLuisPaulo')}><a href="">Download CV</a></button>}
+                        {(!isSafari || !isIOS || !isMacOs) && <button className='butGetCv' onClick={() => handleDownload(cvluis, 'CvLuisPaulo')}><a href="">Download CV</a></button>}
                         
                     </div>
                 </div>
