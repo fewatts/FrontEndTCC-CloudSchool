@@ -8,6 +8,7 @@ import { Cv } from './pages/cv/Cv';
 import { Error } from './pages/error/Error';
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import { Menu } from './components/menu/Menu';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/cv' element={<Cv />} />
             <Route path='/about' element={<About />} />
+            <Route path='/Menu' element={<Menu />} />
             <Route path='*' element={<Error />} />
           </Routes>
         </div>
