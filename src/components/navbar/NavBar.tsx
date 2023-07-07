@@ -13,7 +13,7 @@ export function NavBar() {
         <ul id='itens2'>
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/cv'>Cv</Link></li>
-          <li><Link to='/about'>Sobre</Link></li>
+          <li><Link to='/about'>Saiba mais</Link></li>
         </ul>
       </div>
 

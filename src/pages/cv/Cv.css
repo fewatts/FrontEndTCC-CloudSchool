@@ -54,6 +54,15 @@
     border-radius: 17px;
     padding-left: 10px;
     margin-top: 10px;
+    cursor: pointer;
+}
+
+.butGetCv a:hover{
+    color: var(--blue);
+}
+
+.butGetCv:hover{
+    color: var(--blue);
 }
 
 @media screen and (min-width: 768px) {

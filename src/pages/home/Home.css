@@ -19,8 +19,9 @@ main {
 .container {
     text-align: center;
     font-weight: bold;
-    margin-top: 26vh;
+    margin-top: 10vh;
     padding: 4rem;
+    max-width: 800px    ;
     width: auto;
 }
 
