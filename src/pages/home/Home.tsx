@@ -1,5 +1,5 @@
 import './Home.css';
-import home from './../../assets/logos/home.svg';
+import home from './../../assets/logos/home.png';
 
 export function Home() {
     return (
