@@ -9,6 +9,7 @@
 
 .text1{
     text-align: justify;
+    text-indent: 20px;
 }
 
 main {
@@ -19,8 +20,9 @@ main {
 .container {
     text-align: center;
     font-weight: bold;
-    margin-top: 26vh;
+    margin-top: 10vh;
     padding: 4rem;
+    max-width: 750px    ;
     width: auto;
 }
 

@@ -9,7 +9,7 @@ export function Menu() {
                 <ul className='list-menu'>
                     <li><Link to='/' ><h1 className='h1menu'>Home</h1></Link></li>
                     <li><Link to='/cv' ><h1 className='h1menu'>Currículos</h1></Link></li>
-                    <li><Link to='/about' ><h1 className='h1menu' id='h1menul'>Sobre</h1></Link></li>
+                    <li><Link to='/about' ><h1 className='h1menu' id='h1menul'>Saiba mais</h1></Link></li>
                 </ul>
             </div>
         </>

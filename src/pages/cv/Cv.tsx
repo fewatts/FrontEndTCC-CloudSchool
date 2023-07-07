@@ -16,6 +16,9 @@ import picbruna from './../../assets/profilepics/picbruna.jpeg';
 import cvluis from './../../assets/CV-LuisPaulo.pdf';
 import picluis from './../../assets/profilepics/picluis.jpeg';
 
+import cverika from './../../assets/Cv-ErikaSantos.pdf';
+import picerika from './../../assets/profilepics/picerika.jpeg';
+
 const integrantes = [
     {
         name: 'Bruna Tulik',
@@ -30,10 +33,10 @@ const integrantes = [
         pic: piccamilla,
     },
     {
-        name: 'Erika',
-        cvlink: cvfernando,
+        name: 'Erika Santos',
+        cvlink: cverika,
         cvname: 'Cv-Erika',
-        pic: picfernando
+        pic: picerika
     },
     {
         name: 'Fernando Alves',
@@ -52,7 +55,10 @@ const integrantes = [
 export function Cv() {
     const navigate = useNavigate();
 
-    const handleDownload = (fileUrl: string, fileName: string) => {
+    const handleDownload = (event: React.MouseEvent<HTMLButtonElement>, fileUrl: string, fileName: string) => {
+
+        event.preventDefault();
+
         const link = document.createElement('a');
         link.href = fileUrl;
         link.setAttribute('download', fileName);
@@ -60,7 +66,12 @@ export function Cv() {
 
         if (!isSafari) {
             try {
-                const clickEvent = new MouseEvent('click');
+                const clickEvent = new MouseEvent('click', {
+                    view: window,
+                    bubbles: true,
+                    cancelable: true,
+                });
+
                 link.dispatchEvent(clickEvent);
                 toast.success('Download realizado!', {
                     position: 'top-center',
@@ -72,7 +83,6 @@ export function Cv() {
                     progress: undefined,
                     theme: 'colored',
                 });
-                navigate('/cv');
             } catch (error) {
                 toast.error('Erro no download: ' + error, {
                     position: 'top-center',
@@ -89,7 +99,7 @@ export function Cv() {
             document.body.removeChild(link);
         } else {
             toast.warning(
-                'Seu navegador não permite dowload\ndireto da página,\nacesse o arquivo para baixa-lo',
+                'Seu navegador não permite download direto da página, acesse o arquivo para baixá-lo',
                 {
                     position: 'top-center',
                     autoClose: 4000,
@@ -101,9 +111,9 @@ export function Cv() {
                     theme: 'colored',
                 }
             );
-            navigate('/cv');
         }
     };
+
 
 
     return (
@@ -117,7 +127,7 @@ export function Cv() {
                             <img src={intengrante.pic} alt={intengrante.name} className='profilepic' />
                             <h2 className='h1but'>{intengrante.name}</h2>
                             <button className='butGetCv'><a href={intengrante.cvlink} target='blank'>Visualizar CV</a></button>
-                            {(!isSafari && !isIOS && !isMacOs) && <button className='butGetCv' onClick={() => handleDownload(intengrante.cvlink, intengrante.cvname)}><a href="">Download CV</a></button>}
+                            {(!isSafari && !isIOS && !isMacOs) && <button className='butGetCv' onClick={(event) => handleDownload(event, intengrante.cvlink, intengrante.cvname)}>Download CV</button>}
                         </div>
                     </div>
                 ))}
