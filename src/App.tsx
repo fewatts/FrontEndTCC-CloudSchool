@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import './App.css'
 import { Footer } from './components/footer/Footer';
 import { NavBar } from './components/navbar/NavBar';
@@ -23,7 +23,7 @@ function App() {
             <Route path='/cv' element={<Cv />} />
             <Route path='/about' element={<About />} />
             <Route path='/Menu' element={<Menu />} />
-            <Route path='*' element={<Error />} />
+            <Route path='/*' element={<Error />} />
           </Routes>
         </div>
         <Footer />
