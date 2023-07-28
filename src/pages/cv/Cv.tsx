@@ -118,7 +118,7 @@ export function Cv() {
 
     return (
         <>
-            <h1 className='h1cv'>Currículos da Equipe:</h1>
+            <h1 className='h1cv'>Currículos:</h1>
             <main className='cv'>
 
                 {integrantes.map(intengrante => (
