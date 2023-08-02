@@ -1,24 +1,29 @@
-.error {
-    margin: auto;
-    padding: 7.6vh;
+.h1error{
     text-align: center;
-    margin-bottom: 3vh;
+}
+
+.error {
+    display: block;
+    margin: 20px;
 }
 
 .imgerror {
+    margin: auto;
     height: auto;
-    width: 100%;
-    max-width: 100%;
+    width: 500px;
 }
-
-@media screen and (min-width: 1200px) {
-    .imgerror {
-        max-height: 50vh;
+@media screen and (max-width: 426px){
+    .error{
+        margin: 50px 0px 50px 0px;
     }
 }
-
-@media screen and (min-width: 1600px) {
-    .imgerror {
-        max-height: 60vh;
+@media screen and (max-width: 376px){
+    .error{
+        margin: 50px 0px 50px 0px;
+    }
+}
+@media screen and (max-width: 321px){
+    .error{
+        margin: 80px 0px 80px 0px;
     }
 }
